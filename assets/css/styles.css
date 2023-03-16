@@ -27,11 +27,39 @@ a{
     text-decoration: none;
 }
 
+.btn{
+    --height:60px;
+    display: inline-block;
+    min-width: 205px;
+    text-align: center;
+    height: var(--height);
+    padding: 0 20px;
+    border:1px solid #2E80CE;
+    font-size:1.6rem;
+    font-weight: 400;
+    line-height: var(--height);
+    border-radius: 99px;
+    color:#FFF;
+    background: #2E80CE;
+}
+
+.btn:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
 /* ----------------------------------- Header ----------------------------------- */
 
 .header{
     min-height: 100vh;
     background:var(--header-bg);
+    padding-top: 30px;
+}
+
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo{
@@ -78,3 +106,39 @@ a{
     font-size: 1.2em;
     font-weight: 300;
 }
+
+.navbar__list{
+    display: flex;
+}
+
+.action__login,
+.navbar__link{
+    font-weight: 300;
+    font-size: 1.6rem;
+    padding: 4px 21px;
+    color:#C9D2DA;
+}
+
+.navbar__link:hover,.navbar__link--active{
+    text-shadow: 1px 0 0 currentColor ;
+    color: #FFFFFF;
+}
+
+.navbar__link--active::before{
+    position: relative;
+    left: -8px;
+    top:-2px;
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #FFF;
+}
+
+.action__signup{
+    --height:44px;
+    min-width: 104px;
+    border-radius: 22px;
+}
+
